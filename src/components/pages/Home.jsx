@@ -1,5 +1,8 @@
-import { WobbleCard } from "@/components/ui/WobbleCard.jsx"
-import { Button } from "@/components/ui/button"
+
+import { WobbleCard } from "@/components/ui/WobbleCard.jsx";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
+
 
 export default function Home() {
   return (
@@ -9,6 +12,7 @@ export default function Home() {
         className=""
       >
         <div className="max-w-xs">
+
           <h2 className="text-balance text-base md:text-xl text-left lg:text-3xl font-bold tracking-[-0.015em] text-gray-800">
             Rizz your Hirer, with <span className="font-serif text-3xl bg-gradient-to-r from-[#489af2] to-purple-600 bg-clip-text text-transparent">Rizz-u.me</span> 
           </h2>
@@ -31,11 +35,13 @@ export default function Home() {
         </h2>
         <p className="mt-4 max-w-[26rem] text-left text-lg text-slate-600">
           Impressively designed and professionally-formatted resume templates let you stand out. Download your template to Word or PDF.
+
         </p>
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-slate-100 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm mx-auto text-center">
           <h2 className="max-w-sm md:max-w-lg text-center text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-800">
+
           Quickly and easily build your professional resume to get hired faster
           </h2>
           <p className="mt-4 max-w-[26rem] mx-auto text-center text-lg text-slate-600">
@@ -67,6 +73,7 @@ export default function Home() {
         />
       </WobbleCard>
     </div>
-  )
+
+  );
 }
 

@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 
+import { Link } from "react-router";
+import { useEffect, useState } from "react";
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
@@ -11,14 +12,6 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-gray-200 backdrop-blur-lg border-b border-white/10 shadow-xl">
       <div className="mx-auto px-4">
         <div className="flex items-center justify-between h-15">
-          {/* Logo */}
-          <div className="font-mono text-xl font-bold text-gray-800">
-            <img
-              src="/openart-image_iaU5tqF4_1743225684481_raw_copy-removebg-preview.png"
-              className="rounded-full w-12 h-12 bg-gray-200"
-              alt="Logo"
-            />
-          </div>
 
           <div className="flex items-center md:hidden space-x-4">
             <button className="px-4 py-2 border-2 border-[#489af2] text-gray-800 rounded-lg hover:bg-[#489af2] hover:text-white transition">
@@ -34,28 +27,42 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               &#9776;
             </div>
           </div>
-
-          <div className="hidden md:flex items-center space-x-6">
-            <a href="#home" className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg">
+          
+             <div className="hidden md:flex items-center space-x-6">
+            <Link
+              to="/"
+              className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg"
+            >
               Home
-            </a>
-            <a href="#aboutus" className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg">
+            </Link>
+            <Link
+              to="/templates"
+              className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg"
+            >
               Templates
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg">
+            </Link>
+            <Link
+              to="/build"
+              className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg"
+            >
               Build
-            </a>
-            <a href="#" className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg">
+            </Link>
+            <Link
+              to="/aboutus"
+              className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg "
+            >
               About Us
-            </a>
-
-            <button className="px-3 py-2 bg-[#489af2] text-white rounded-xl hover:scale-105 transition-transform duration-300">
-              Sign In
-            </button>
-
-            <button className="px-4 py-2 border-2 border-[#489af2] text-[#489af2] rounded-xl hover:bg-[#489af2] hover:text-white transition duration-300">
-              Sign Up
-            </button>
+            </Link>
+            <Link to="/signin">
+              <button className="px-3 py-2 bg-[#489af2] text-white rounded-xl hover:scale-105 transition-transform duration-300">
+                Sign In
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="px-4 py-2 border-2 border-[#489af2] text-[#489af2] rounded-xl hover:bg-[#489af2] hover:text-white transition duration-300">
+                Sign Up
+              </button>
+            </Link>
 
             <div className="relative">
               <button
