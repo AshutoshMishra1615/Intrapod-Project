@@ -1,6 +1,5 @@
-import { useState } from "react";
-import "./App.css";
-
+import { useState } from 'react';
+import './App.css'
 import { LoadingScreen } from "./components/LoadingScreen";
 import "./index.css";
 import { MobileMenu } from "./components/MobileMenu";
@@ -18,6 +17,7 @@ function App() {
 
   return (
     <>
+
       <Router>
         {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
         <div
@@ -39,6 +39,7 @@ function App() {
       </Router>
     </>
   );
+
 }
 
 export default App;
