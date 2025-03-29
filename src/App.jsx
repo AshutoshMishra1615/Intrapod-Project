@@ -12,12 +12,13 @@ import SignUp from "./components/pages/SignUp";
 import { Toaster } from "@/components/ui/sonner";
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+   const [isLoaded, setIsLoaded] = useState(false);
+   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
 
+  </>
       <Router>
         {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
         <div
