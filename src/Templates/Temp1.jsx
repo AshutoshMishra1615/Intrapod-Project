@@ -1,4 +1,4 @@
-import './Temp1.css'
+// import './Temp1.css'
 import profile from './profile.jpeg'
 const Temp1 = () => {
     return (
