@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-        <footer id="footer" className="fixed bg-gray-800 text-white py-5 pt-6 bottom-0 w-full">
+        <footer id="footer" className="bg-gray-800 text-white py-5 pt-6 bottom-0 w-full mt-30">
             <div className="max-w-7xl mx-auto text-center">
                 <div className="text-sm uppercase tracking-wide flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
                     <a href="#" className="hover:text-gray-400">About Us</a> |
