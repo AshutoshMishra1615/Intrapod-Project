@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import './App.css'
-
 import { LoadingScreen } from './components/LoadingScreen';
 import "./index.css";
 import { MobileMenu } from './components/MobileMenu';
 import { Navbar } from './components/Navbar';
-import  Home  from './components/sections/Home';
+import Home from './components/Pages/Home';
 import { Footer } from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import SignIn from './components/pages/SignIn'
@@ -20,7 +19,6 @@ function App() {
 
   return (
     <>
-
   {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
     <div className= {`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-custom-gradient text-gray-100`} >
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -32,9 +30,7 @@ function App() {
     </div>
   </>
   );
-
   
-
 }
 
 export default App
