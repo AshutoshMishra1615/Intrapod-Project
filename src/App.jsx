@@ -11,9 +11,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import SignIn from './components/pages/SignIn'
 import SignUp from './components/pages/SignUp'
 
-
-
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,8 +24,6 @@ function App() {
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home />
       <Footer />
-      
-
     </div>
   </>
   );
