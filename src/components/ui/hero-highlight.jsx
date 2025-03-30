@@ -87,7 +87,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        "relative inline-block rounded-lg py-2 bg-gradient-to-r from-[#63a4f4] to-purple-400 px-3 dark:from-indigo-500 dark:to-purple-500",
+        "relative inline-block rounded-lg py-2 bg-gradient-to-r from-[#a3d1f4] to-[#4e9dff] px-3 dark:from-indigo-500 dark:to-purple-500",
         className
       )}>
       {children}
