@@ -122,7 +122,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-[#E6F4FF] to-[#F8FBFF] z-100">
+    <div className="z-5 relative w-full min-h-screen bg-gradient-to-b from-[#E6F4FF] to-[#F8FBFF]">
       {/* Header Section with gradient overlay */}
       <motion.div
         className="w-full bg-cover bg-center py-8 flex flex-col items-center relative"

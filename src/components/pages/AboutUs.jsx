@@ -35,14 +35,14 @@ const AboutUs = () => {
   ];
 
   return (
-    <main className="z-100 relative">
+    <main className="z-5 relative">
       <motion.div
         className="min-h-screen "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="container mx-auto px-4 py-16">
+        <div className="z-100 container mx-auto px-4 py-16">
           {/* Header Section */}
           <motion.div
             className="mb-16 text-center"

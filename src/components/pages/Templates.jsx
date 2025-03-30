@@ -5,7 +5,6 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
-// Template data
 const templates = [
   {
     id: "modern",
@@ -21,21 +20,14 @@ const templates = [
       "Traditional layout perfect for corporate and executive positions.",
     image: "/placeholder.svg?height=400&width=300",
   },
-  {
-    id: "creative",
-    name: "Creative",
-    description:
-      "Unique design for creative industries and design professionals.",
-    image: "/placeholder.svg?height=400&width=300",
-  },
 ];
 
 export default function TemplatesPage() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
 
   return (
-    <div className="text-gray-800 z-100 flex flex-col">
-      <main className="flex-1 z-100  py-12">
+    <div className="text-gray-800 z-5 flex flex-col">
+      <main className="flex-1 z-5  py-12">
         <div className="container mx-auto px-6">
           <h1 className="mb-6 text-3xl font-bold">Choose a Resume Template</h1>
           <p className="mb-8 text-lg text-gray-600 ">

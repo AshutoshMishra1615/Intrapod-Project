@@ -4,7 +4,6 @@ import { Link } from "react-router";
 
 export default function Home() {
   return (
-    
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-13 max-w-7xl mx-auto w-full shadow-lg">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-slate-100 min-h-[500px] lg:min-h-[300px]"
@@ -12,9 +11,9 @@ export default function Home() {
       >
         <div className="max-w-xs">
           <h2 className="text-balance text-base md:text-xl text-left lg:text-3xl font-bold tracking-[-0.015em] text-gray-800">
-            Rizz your Hirer, with 
+            Rizz your Hirer, with
             <span className="font-serif text-3xl bg-gradient-to-r from-[#489af2] to-purple-600 bg-clip-text text-transparent pl-1">
-               Rizz-u.me
+              Rizz-u.me
             </span>
           </h2>
           <p className="mt-4 text-left text-gray-800 text-xl">
@@ -51,12 +50,6 @@ export default function Home() {
             you stand out to recruiters, hiring managers, and employers.
           </p>
           <div className="mt-8 flex justify-center gap-6">
-            <Button
-              asChild
-              className="transition-all duration-300 transform hover:-translate-y-1 bg-[#1a91f0] hover:bg-[#1a91f0]/90 py-6 px-8"
-            >
-              <Link to="/build">Build</Link>
-            </Button>
             <Button
               asChild
               className="transition-all duration-300 transform hover:-translate-y-1 bg-[#1a91f0] hover:bg-[#1a91f0]/90 py-6 px-8"

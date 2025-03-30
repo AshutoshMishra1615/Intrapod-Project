@@ -17,12 +17,12 @@ export default function BuildPage() {
   const [activeTab, setActiveTab] = useState("personal");
 
   const [personalData, setPersonalData] = useState({
-      firstName: " ",
-      lastName: " ",
-      email: " ",
-      phone: " ",
-      address: " ",
-      summary: " ",
+    firstName: " ",
+    lastName: " ",
+    email: " ",
+    phone: " ",
+    address: " ",
+    summary: " ",
   });
   const [educationData, setEducationData] = useState([]);
   const [expData, setExpData] = useState({});
@@ -38,7 +38,7 @@ export default function BuildPage() {
 
   return (
     <div className="text-black flex min-h-screen flex-col">
-      <div className="container mx-auto flex items-center px-6 py-4">
+      <div className="container mx-auto flex items-center px-6 py-4 z-40 relative">
         <Button
           variant="ghost"
           size="sm"
@@ -50,7 +50,7 @@ export default function BuildPage() {
           Building <span className="capitalize">{templateId}</span> Resume
         </h1>
       </div>
-      <main className="z-100 flex-1 px-6 py-8">
+      <main className="z-5 flex-1 px-6 py-8">
         <div className="container mx-auto">
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="p-6 w-full">
@@ -68,25 +68,33 @@ export default function BuildPage() {
                 <TabsContent value="personal">
                   <PersonalInfoForm
                     data={personalData}
-                    onSub={(data) => setPersonalData((prev) => ({...prev, ...data}))}
+                    onSub={(data) =>
+                      setPersonalData((prev) => ({ ...prev, ...data }))
+                    }
                   />
                 </TabsContent>
                 <TabsContent value="education">
-                  <EducationForm 
+                  <EducationForm
                     data={educationData}
-                    onSub={(newEducationData) => setEducationData(newEducationData)}
+                    onSub={(newEducationData) =>
+                      setEducationData(newEducationData)
+                    }
                   />
                 </TabsContent>
                 <TabsContent value="experience">
-                  <ExperienceForm 
-                   data={expData}
-                   onSub={(newExpData) => setExpData((prev) => ({...prev,newExpData}))}
+                  <ExperienceForm
+                    data={expData}
+                    onSub={(newExpData) =>
+                      setExpData((prev) => ({ ...prev, newExpData }))
+                    }
                   />
                 </TabsContent>
                 <TabsContent value="skills">
-                  <SkillsForm 
-                   data={skillsData}
-                   onSub={(data) => setSkillsData((prev) => ({...prev, data}))}
+                  <SkillsForm
+                    data={skillsData}
+                    onSub={(data) =>
+                      setSkillsData((prev) => ({ ...prev, data }))
+                    }
                   />
                 </TabsContent>
               </Tabs>
@@ -129,12 +137,12 @@ export default function BuildPage() {
               </div>
             </Card>
             <div className="sticky top-8 h-fit w-full">
-              <ResumePreview 
-                templateId={templateId} 
-                personalData = {personalData} 
-                educationData = {educationData} 
-                expData = {expData} 
-                skillsData ={skillsData}
+              <ResumePreview
+                templateId={templateId}
+                personalData={personalData}
+                educationData={educationData}
+                expData={expData}
+                skillsData={skillsData}
               />
             </div>
           </div>
