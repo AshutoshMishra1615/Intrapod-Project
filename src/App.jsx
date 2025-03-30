@@ -12,25 +12,18 @@ import SignUp from "./components/pages/SignUp";
 import { Toaster } from "@/components/ui/sonner";
 import Profile from "./components/Profile/profile";
 import { ProfileProvider } from "./context/ProfileContext";
-import { Edit } from "lucide-react";
 import EditProfile from "./components/Profile/EditProfile";
-import Temp1 from "./Templates/Temp1";
-import Temp2 from "./Templates/Temp2";
 import BuildPage from "./components/pages/build";
 import TemplatesPage from "./components/pages/Templates";
-
-import { auth } from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { ChatBot } from "./components/chatbot";
 import AboutUs from "./components/pages/AboutUs";
 
 import BackgroundLines from "@/components/ui/background-paths";
-import HeroHighlightDemo from "./components/Pages/Hero";
+import HeroHighlightDemo from "./components/pages/Hero";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [user] = useAuthState(auth);
 
   return (
     <Router>
