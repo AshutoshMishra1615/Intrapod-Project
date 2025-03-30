@@ -136,7 +136,7 @@ const EditProfile = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#E6F4FF] to-[#F8FBFF] py-12 px-4 sm:px-6">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#E6F4FF] to-[#F8FBFF] py-12 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
         {/* Header with animation */}
         <motion.div
