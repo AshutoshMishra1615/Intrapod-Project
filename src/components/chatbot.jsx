@@ -93,7 +93,7 @@ export function ChatBot() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div className="fixed bottom-24 right-6 w-[350px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200">
+          <motion.div className="z-50 fixed bottom-24 right-6 w-[350px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200">
             <div className="bg-gradient-to-r from-[#1A91F0] to-[#0D47A1] text-white p-4 flex justify-between">
               <div className="flex items-center gap-2">
                 <Avatar className="h-8 w-8 border-2 border-white/50">
