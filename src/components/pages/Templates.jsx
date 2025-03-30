@@ -12,14 +12,14 @@ const templates = [
     name: "Modern",
     description:
       "Clean and contemporary design with a focus on skills and experience.",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "https://cdn.enhancv.com/localizedImages/648/i/aHR0cHM6Ly9jZG4uZW5oYW5jdi5jb20vcHJlZGVmaW5lZC1leGFtcGxlcy83UGRkSFJvR2xyVk00N0o0bjNQY2Ezb0VvaUxqWlJkTHBRTW1xYXc3L2ltYWdlLnBuZw~~.png",
   },
   {
     id: "professional",
     name: "Professional",
     description:
       "Traditional layout perfect for corporate and executive positions.",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "https://cdn.enhancv.com/single_column_traditional_resume_template_84a04707cf.png",
   },
   {
     id: "creative",
@@ -47,7 +47,7 @@ export default function TemplatesPage() {
             {templates.map((template) => (
               <Card
                 key={template.id}
-                className={`overflow-hidden transition-all bg-gray-100 hover:shadow-md ${
+                className={`overflow-hidden transition-all bg-white hover:shadow-md ${
                   selectedTemplate === template.id ? "ring-2 ring-primary" : ""
                 }`}
                 onClick={() => setSelectedTemplate(template.id)}
