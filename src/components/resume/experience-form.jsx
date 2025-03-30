@@ -2,7 +2,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useFieldArray, useForm } from "react-hook-form";
 import { Plus, Trash2 } from "lucide-react";
 import * as z from "zod";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -34,7 +33,7 @@ const experienceFormSchema = z.object({
   experienceItems: z.array(experienceItemSchema),
 });
 
-export function ExperienceForm() {
+export function ExperienceForm({onSub}) {
   const form = useForm({
     resolver: zodResolver(experienceFormSchema),
     defaultValues: {
@@ -59,7 +58,7 @@ export function ExperienceForm() {
 
   function onSubmit(data) {
     console.log("Experience data submitted:", data);
-    // Here you would typically update the parent component's state
+    onSub(data)
   }
 
   return (

@@ -40,7 +40,7 @@ const skillsFormSchema = z.object({
   ),
 });
 
-export function SkillsForm() {
+export function SkillsForm({onSub}) {
   const form = useForm({
     resolver: zodResolver(skillsFormSchema),
     defaultValues: {
@@ -79,7 +79,7 @@ export function SkillsForm() {
 
   function onSubmit(data) {
     console.log("Skills data submitted:", data);
-    // Here you would typically update the parent component's state
+    onSub(data);
   }
 
   return (

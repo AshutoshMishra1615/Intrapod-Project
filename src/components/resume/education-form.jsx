@@ -1,9 +1,7 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useFieldArray, useForm } from "react-hook-form";
 import { Plus, Trash2 } from "lucide-react";
 import * as z from "zod";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -33,7 +31,7 @@ const educationFormSchema = z.object({
   educationItems: z.array(educationItemSchema),
 });
 
-export function EducationForm() {
+export function EducationForm({onSub}) {
   const form = useForm({
     resolver: zodResolver(educationFormSchema),
     defaultValues: {
@@ -57,7 +55,7 @@ export function EducationForm() {
 
   function onSubmit(data) {
     console.log("Education data submitted:", data);
-    // Here you would typically update the parent component's state
+    onSub(data);
   }
 
   return (

@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -27,7 +26,7 @@ const personalInfoSchema = z.object({
     .optional(),
 });
 
-export function PersonalInfoForm() {
+export function PersonalInfoForm({onSub}) {
   const form = useForm({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
@@ -42,7 +41,7 @@ export function PersonalInfoForm() {
 
   function onSubmit(data) {
     console.log("Personal info submitted:", data);
-    // Here you would typically update the parent component's state
+    onSub(data)
   }
 
   return (
