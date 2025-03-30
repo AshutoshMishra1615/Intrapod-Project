@@ -4,7 +4,7 @@ import { Card, CardContent } from "../ui/card";
 import { Label } from "../ui/label";
 import { FaGoogle } from "react-icons/fa";
 import { useState } from "react";
-import { Form, Link } from "react-router";
+import { Form, Link, useNavigate } from "react-router";
 import { toast } from "sonner";
 import { auth } from "../../../firebase";
 import {
@@ -14,6 +14,7 @@ import {
 } from "firebase/auth";
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleGoogleSignIn = async () => {
@@ -21,6 +22,7 @@ export default function SignIn() {
     try {
       await signInWithPopup(auth, provider);
       toast.success("Google Sign-in successful!");
+      navigate("/");
     } catch (error) {
       console.error("Error during sign-in:", error);
       toast.error(error.message);
@@ -31,6 +33,7 @@ export default function SignIn() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Sign-in successful!");
+      navigate("/");
     } catch (error) {
       console.error("Error signing in:", error);
       toast.error(error.message);

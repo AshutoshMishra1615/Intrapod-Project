@@ -33,7 +33,7 @@ const experienceFormSchema = z.object({
   experienceItems: z.array(experienceItemSchema),
 });
 
-export function ExperienceForm({onSub}) {
+export function ExperienceForm({ onSub }) {
   const form = useForm({
     resolver: zodResolver(experienceFormSchema),
     defaultValues: {
@@ -58,7 +58,7 @@ export function ExperienceForm({onSub}) {
 
   function onSubmit(data) {
     console.log("Experience data submitted:", data);
-    onSub(data)
+    onSub(data);
   }
 
   return (

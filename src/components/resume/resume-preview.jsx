@@ -13,12 +13,12 @@ import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
 export function ResumePreview({
-   templateId ,
-    personalData,
-    expData,
-    educationData,
-    skillsData
-  }) {
+  templateId,
+  personalData,
+  expData,
+  educationData,
+  skillsData,
+}) {
   const safeTemplateId = templateId ? templateId.toString() : "Default";
   const contentRef = useRef(); // Reference for the component
 
@@ -33,21 +33,23 @@ export function ResumePreview({
       </CardHeader>
       <CardContent className="p-0 flex justify-center">
         <div className="relative w-full max-w-[600px] aspect-[3/4]">
-          <img
-            src={`/placeholder.svg?height=600&width=450&text=${encodeURIComponent(
-              safeTemplateId.charAt(0).toUpperCase() + safeTemplateId.slice(1)
-            )}%20Template`}
-            alt={`${safeTemplateId} template preview`}
-            className="w-full h-full object-cover"
-                />
-          <ResumeTemplate 
-            personal={personalData || {}} 
-            experience={expData || []} 
-            education={educationData || []} 
-            skills={skillsData || []} 
-          />
-
-
+          {!templateId == "modern" ? (
+            <ResumeTemplate
+              ref={contentRef}
+              personal={personalData || {}}
+              experience={expData || []}
+              education={educationData || []}
+              skills={skillsData || []}
+            />
+          ) : (
+            <Student
+              ref={contentRef}
+              personal={personalData || {}}
+              experience={expData || []}
+              education={educationData || []}
+              skills={skillsData || []}
+            />
+          )}
         </div>
       </CardContent>
       <CardFooter className="flex justify-center bg-muted p-2">
@@ -57,7 +59,5 @@ export function ResumePreview({
         </Button>
       </CardFooter>
     </Card>
-
-   
   );
 }
