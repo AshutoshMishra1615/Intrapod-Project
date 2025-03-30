@@ -8,9 +8,9 @@ const ProfileContext = createContext();
 export const ProfileProvider = ({ children }) => {
   // Global state for profile
   const [profile, setProfile] = useState({
-    name: "Sams Tabrez",
-    email: "04tabrez@gmail.com",
-    phone: "7846940025",
+    name: "",
+    email: "",
+    phone: "",
     occupation: "Software Developer",
     image: profileImage,
   });

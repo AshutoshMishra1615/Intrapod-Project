@@ -58,7 +58,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               Home
             </Link>
             <Link
-              to="/templates"
+              to={!user ? "/signin" : "/templates"}
               className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg"
             >
               Templates

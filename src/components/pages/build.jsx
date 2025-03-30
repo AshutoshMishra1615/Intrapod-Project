@@ -29,7 +29,6 @@ export default function BuildPage() {
     experience: [],
     skills: [],
   });
-
   const handleSave = () => {
     console.log("Saving resume data:", formData);
   };

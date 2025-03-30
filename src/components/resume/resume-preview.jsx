@@ -1,5 +1,4 @@
 import { Download } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,9 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Temp1 from "@/Templates/Temp1";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export function ResumePreview({ templateId }) {
   const safeTemplateId = templateId ? templateId.toString() : "Default";
+  const contentRef = useRef(); // Reference for the component
+
+  const handleDownloadPDF = useReactToPrint({
+    contentRef,
+  });
 
   return (
     <Card className="overflow-hidden">
@@ -19,17 +26,12 @@ export function ResumePreview({ templateId }) {
       </CardHeader>
       <CardContent className="p-0 flex justify-center">
         <div className="relative w-full max-w-[450px] aspect-[3/4]">
-          <img
-            src={`/placeholder.svg?height=600&width=450&text=${encodeURIComponent(
-              safeTemplateId.charAt(0).toUpperCase() + safeTemplateId.slice(1)
-            )}%20Template`}
-            alt={`${safeTemplateId} template preview`}
-            className="w-full h-full object-cover"
-          />
+          {/* Ensure Temp1 is wrapped with forwardRef */}
+          <Temp1 ref={contentRef} />
         </div>
       </CardContent>
       <CardFooter className="flex justify-center bg-muted p-2">
-        <Button variant="outline" size="sm">
+        <Button onClick={handleDownloadPDF} variant="outline" size="sm">
           <Download className="mr-2 h-4 w-4" />
           Download Preview
         </Button>
