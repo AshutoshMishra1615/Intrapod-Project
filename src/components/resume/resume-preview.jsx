@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Temp1 from "@/Templates/Temp1";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
