@@ -21,13 +21,11 @@ import TemplatesPage from "./components/pages/Templates";
 
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { ChatBot } from "./components/ChatBot";
+import { ChatBot } from "./components/chatbot";
 import AboutUs from "./components/pages/AboutUs";
 
-import BackgroundLines from "@/components/ui/background-paths"
+import BackgroundLines from "@/components/ui/background-paths";
 import HeroHighlightDemo from "./components/Pages/Hero";
-
-
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -43,19 +41,22 @@ function App() {
         } bg-custom-gradient text-gray-100`}
       >
         <BackgroundLines />
-        
+
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Toaster closeButton />
 
         <ProfileProvider>
           <Routes>
-            <Route path="/" element={
-              <>
-               {isLoaded && < HeroHighlightDemo />}
-              <Home /> 
-              </>
-           }/>
+            <Route
+              path="/"
+              element={
+                <>
+                  {isLoaded && <HeroHighlightDemo />}
+                  <Home />
+                </>
+              }
+            />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />

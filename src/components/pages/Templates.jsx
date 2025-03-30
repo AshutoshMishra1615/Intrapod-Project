@@ -5,10 +5,9 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
-
 // Template data
 const templates = [
-  { 
+  {
     id: "modern",
     name: "Modern",
     description:

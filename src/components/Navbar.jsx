@@ -13,7 +13,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
       toast("Sign-out successful!");
     } catch (error) {
       console.error("Error signing out:", error);
-      alert(error.message);
+      toast(error.message);
     }
   };
   useEffect(() => {
