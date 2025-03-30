@@ -39,8 +39,8 @@ export default function SignIn() {
 
   return (
     <form onSubmit={handleLogin}>
-      <div className="flex justify-center items-center min-h-screen bg-white">
-        <Card className="w-full max-w-md p-6 shadow-md bg-gray-50 text-black">
+      <div className="flex justify-center items-center min-h-screen">
+        <Card className="w-full max-w-md p-6 shadow-md z-100 text-black">
           <h2 className="text-2xl font-semibold text-center ">
             Login to your account
           </h2>
