@@ -50,7 +50,7 @@ export default function BuildPage() {
           Building <span className="capitalize">{templateId}</span> Resume
         </h1>
       </div>
-      <main className="flex-1 bg-muted/30 px-6 py-8">
+      <main className="z-100 flex-1 px-6 py-8">
         <div className="container mx-auto">
           <div className="grid gap-8 lg:grid-cols-2">
             <Card className="p-6 w-full">

@@ -9,6 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Temp1 from "@/Templates/Temp1";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export function ResumePreview({
    templateId ,
@@ -18,6 +21,11 @@ export function ResumePreview({
     skillsData
   }) {
   const safeTemplateId = templateId ? templateId.toString() : "Default";
+  const contentRef = useRef(); // Reference for the component
+
+  const handleDownloadPDF = useReactToPrint({
+    contentRef,
+  });
 
   return (
     <Card className="overflow-hidden">
@@ -44,7 +52,7 @@ export function ResumePreview({
         </div>
       </CardContent>
       <CardFooter className="flex justify-center bg-muted p-2">
-        <Button variant="outline" size="sm">
+        <Button onClick={handleDownloadPDF} variant="outline" size="sm">
           <Download className="mr-2 h-4 w-4" />
           Download Preview
         </Button>

@@ -13,7 +13,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
       toast("Sign-out successful!");
     } catch (error) {
       console.error("Error signing out:", error);
-      alert(error.message);
+      toast(error.message);
     }
   };
   useEffect(() => {
@@ -27,7 +27,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="font-mono text-xl font-bold text-gray-800">
             <img
               src="/openart-image_iaU5tqF4_1743225684481_raw_copy-removebg-preview.png"
-              className="rounded-full w-12 h-12 bg-gray-200"
+              className="rounded-full w-16 h-16 bg-transparent"
               alt="Logo"
             />
           </div>
@@ -58,7 +58,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               Home
             </Link>
             <Link
-              to="/templates"
+              to={!user ? "/signin" : "/templates"}
               className="text-gray-800 hover:text-gray-500 transition-colors font-bold text-lg"
             >
               Templates
