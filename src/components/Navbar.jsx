@@ -27,7 +27,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="font-mono text-xl font-bold text-gray-800">
             <img
               src="/openart-image_iaU5tqF4_1743225684481_raw_copy-removebg-preview.png"
-              className="rounded-full w-12 h-12 bg-gray-200"
+              className="rounded-full w-16 h-16 bg-transparent"
               alt="Logo"
             />
           </div>

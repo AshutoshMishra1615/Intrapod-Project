@@ -4,16 +4,17 @@ import { Link } from "react-router";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-50 max-w-7xl mx-auto w-full">
+    
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-13 max-w-7xl mx-auto w-full shadow-lg">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-slate-100 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <div className="max-w-xs">
           <h2 className="text-balance text-base md:text-xl text-left lg:text-3xl font-bold tracking-[-0.015em] text-gray-800">
-            Rizz your Hirer, with{" "}
-            <span className="font-serif text-3xl bg-gradient-to-r from-[#489af2] to-purple-600 bg-clip-text text-transparent">
-              Rizz-u.me
+            Rizz your Hirer, with 
+            <span className="font-serif text-3xl bg-gradient-to-r from-[#489af2] to-purple-600 bg-clip-text text-transparent pl-1">
+               Rizz-u.me
             </span>
           </h2>
           <p className="mt-4 text-left text-gray-800 text-xl">
@@ -65,18 +66,18 @@ export default function Home() {
           </div>
         </div>
         <img
-          src="/linear.webp"
-          width={500}
+          src="https://marketplace.canva.com/EAFVMZyTuuA/1/0/566w/canva-black-and-white-minimalistic-simple-resume-opz2VScwTdY.jpg"
+          width={600}
           height={500}
           alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl grayscale filter"
+          className="hidden md:block absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl grayscale filter"
         />
         <img
-          src="/linear.webp"
-          width={500}
+          src="https://cdn.enhancv.com/single_column_2_traditional_resume_template_9018b1cf3a.png"
+          width={600}
           height={500}
           alt="linear demo image"
-          className="absolute -left-10 md:-left-[40%] lg:-left-[20%] -bottom-10 object-contain rounded-2xl grayscale filter"
+          className="hidden lg:block absolute -left-10 md:-left-[40%] lg:-left-[20%] -bottom-10 object-contain rounded-2xl grayscale filter"
         />
       </WobbleCard>
     </div>
