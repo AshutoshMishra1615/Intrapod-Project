@@ -18,15 +18,21 @@ import Temp1 from "./Templates/Temp1";
 import Temp2 from "./Templates/Temp2";
 import BuildPage from "./components/pages/build";
 import TemplatesPage from "./components/pages/Templates";
+
+import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { ChatBot } from "./components/ChatBot";
+import AboutUs from "./components/pages/AboutUs";
+
 import BackgroundLines from "@/components/ui/background-paths"
 import HeroHighlightDemo from "./components/Pages/Hero";
-
 
 
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user] = useAuthState(auth);
 
   return (
     <Router>
@@ -56,8 +62,10 @@ function App() {
             <Route path="/editProfile" element={<EditProfile />} />
             <Route path="/build/:templateId" element={<BuildPage />} />
             <Route path="/templates" element={<TemplatesPage />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
         </ProfileProvider>
+        <ChatBot />
 
         <Footer />
       </div>
