@@ -18,6 +18,12 @@ import Temp1 from "./Templates/Temp1";
 import Temp2 from "./Templates/Temp2";
 import BuildPage from "./components/pages/build";
 import TemplatesPage from "./components/pages/Templates";
+import BackgroundLines from "@/components/ui/background-paths"
+import HeroHighlightDemo from "./components/Pages/Hero";
+
+
+
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,18 +36,24 @@ function App() {
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-custom-gradient text-gray-100`}
       >
+        <BackgroundLines />
+        
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Toaster closeButton />
 
         <ProfileProvider>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={
+              <>
+               {isLoaded && < HeroHighlightDemo />}
+              <Home /> 
+              </>
+           }/>
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/editProfile" element={<EditProfile />} />
-
             <Route path="/build/:templateId" element={<BuildPage />} />
             <Route path="/templates" element={<TemplatesPage />} />
           </Routes>

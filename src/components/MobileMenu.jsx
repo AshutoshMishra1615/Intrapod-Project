@@ -56,6 +56,9 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         Profile
       </a>
+      <button className="px-6 py-2 mt-2.5 border-2 border-[#489af2] text-[#489af2] rounded-xl hover:bg-[#489af2] hover:text-white transition duration-300">
+         Sign Out
+      </button>
     </div>
   );
 };
